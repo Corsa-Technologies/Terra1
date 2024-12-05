@@ -1,0 +1,13 @@
+join Lucia (falando) leftmost
+join iris (irisouvindo) rightmost
+Lucia (falando): Uma coisa não sai da minha cabeça...
+update Lucia (ouvindo)
+iris (irisfalando): Oquê foi?, Nós cumprimos a missão, não cumprimos?
+update iris (irisouvindo)
+Lucia (falando): Sim mas...
+Lucia: Nós fomos a praga que destruiu este planeta. Nossa ganância, interesses próprios, guerras fúteis e extração irresponsável causaram a morte de milhões de animais e seres vivos que residiam conosco.
+Lucia: A humanidade está condenada, mas ainda existe uma semente de esperança, aqueles que não aprendem com a história estão condenados a repeti-la.
+Lucia: Eu sozinha não posso salvar a humanidade de seus pecados, mas eu espero do fundo do coração que ela aprenda com seus erros…
+update Lucia (ouvindo)
+iris (irisfalando): Você fez oquê pode, e é isso que importa...
+[signal arg="activate_something"]

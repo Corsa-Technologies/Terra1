@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dotf1q5w5oa8a"]
+
+[ext_resource type="Texture2D" uid="uid://brm0p2xjawx5r" path="res://Níveis/Level4/lorax.jpg" id="1_76ri3"]
+[ext_resource type="Script" path="res://Níveis/Level4/nota_3.gd" id="1_ev3s4"]
+[ext_resource type="PackedScene" uid="uid://bspts3ig2ng2s" path="res://Níveis/Level4/nota_3_canvas.tscn" id="3_cf5f3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6qus"]
+size = Vector2(63, 49)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1inql"]
+
+[node name="nota3" type="Area2D"]
+script = ExtResource("1_ev3s4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, -1)
+shape = SubResource("RectangleShape2D_h6qus")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, -1)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_76ri3")
+
+[node name="nota3canvas" parent="." instance=ExtResource("3_cf5f3")]
+
+[node name="fechar" type="TouchScreenButton" parent="nota3canvas"]
+visibility_layer = 0
+position = Vector2(1297, 44)
+scale = Vector2(53, 54)
+texture_normal = SubResource("CanvasTexture_1inql")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="pressed" from="nota3canvas/fechar" to="." method="_on_fechar_pressed"]

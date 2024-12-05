@@ -1,0 +1,8 @@
+join Lucia (falando) leftmost
+Lucia: Há algum ser vivo aqui?
+join iris (irisfalando) rightmost
+update Lucia (ouvindo)
+iris (irisfalando): Apenas animais mortos, Agente.\
+Não consigo sentir mais nenhum sinal vital nessa área.
+update iris (irisouvindo)
+Lucia (falando): Acho que já vimos o suficiente, esse planeta não tem mais salvação, está morrendo de pouco em pouco. Vamos pegar a cápsula sementeira e ir embora.

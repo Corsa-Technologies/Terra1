@@ -1,0 +1,138 @@
+[gd_scene load_steps=18 format=3 uid="uid://6r0hwy3ijx5f"]
+
+[ext_resource type="Script" path="res://GUI/Controles/controletoque.gd" id="1_6ks27"]
+[ext_resource type="Texture2D" uid="uid://ccmt4kuwp1fmb" path="res://GUI/Controles/Baixo.png" id="2_2qb73"]
+[ext_resource type="Texture2D" uid="uid://c84kgjcecl81t" path="res://GUI/Controles/Baixopressed.png" id="3_8qpyd"]
+[ext_resource type="Texture2D" uid="uid://b1dasygc1ebce" path="res://GUI/Controles/Esquerda.png" id="4_8nklo"]
+[ext_resource type="Texture2D" uid="uid://qbhsrgcs50bb" path="res://GUI/Controles/Esquerdapressed.png" id="5_77gst"]
+[ext_resource type="Texture2D" uid="uid://don1hgpd6kvo5" path="res://GUI/Controles/Direita .png" id="6_2kdu7"]
+[ext_resource type="Texture2D" uid="uid://bfbehuru1my1s" path="res://GUI/Controles/direitapressed.png" id="7_nj468"]
+[ext_resource type="Texture2D" uid="uid://o85hjl84ei8v" path="res://GUI/Controles/Pulo.png" id="8_mon5h"]
+[ext_resource type="Texture2D" uid="uid://bw33828n753lo" path="res://GUI/Controles/Pulopressed.png" id="9_o2c31"]
+[ext_resource type="Texture2D" uid="uid://dcl5urr1u45hj" path="res://GUI/Controles/Tiro.png" id="10_4wxoo"]
+[ext_resource type="Texture2D" uid="uid://btsr2rx8as5c0" path="res://GUI/Controles/Tiropressed.png" id="11_4mkev"]
+[ext_resource type="Texture2D" uid="uid://dcgi67gumry88" path="res://GUI/Controles/Ataque.png" id="12_3eg7t"]
+[ext_resource type="Texture2D" uid="uid://78tdherunilh" path="res://GUI/Controles/Ataquepressed .png" id="13_yty4d"]
+[ext_resource type="Texture2D" uid="uid://c6unkv24ff2v2" path="res://GUI/Controles/Dash .png" id="14_adyiw"]
+[ext_resource type="Texture2D" uid="uid://b3upyetnj2nbw" path="res://GUI/Controles/barra de vida.png" id="14_krhtq"]
+[ext_resource type="Texture2D" uid="uid://ddvlbf67s5mj0" path="res://GUI/Controles/Dashpressed.png" id="15_5dhqr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm73x"]
+
+[node name="ControleTouch" type="CanvasLayer"]
+script = ExtResource("1_6ks27")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 42.0
+offset_bottom = 118.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -642.0
+offset_right = 1150.0
+offset_bottom = -2.0
+grow_vertical = 0
+
+[node name="Descer" type="TouchScreenButton" parent="Control"]
+position = Vector2(192, 495)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_2qb73")
+texture_pressed = ExtResource("3_8qpyd")
+action = "ui_down"
+
+[node name="Esquerda" type="TouchScreenButton" parent="Control"]
+position = Vector2(100, 422)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("4_8nklo")
+texture_pressed = ExtResource("5_77gst")
+action = "ui_left"
+
+[node name="Direita" type="TouchScreenButton" parent="Control"]
+position = Vector2(282, 422)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("6_2kdu7")
+texture_pressed = ExtResource("7_nj468")
+action = "ui_right"
+
+[node name="Pulo" type="TouchScreenButton" parent="Control"]
+position = Vector2(1411, 494)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("8_mon5h")
+texture_pressed = ExtResource("9_o2c31")
+action = "ui_up"
+
+[node name="Tiro" type="TouchScreenButton" parent="Control"]
+position = Vector2(1424, 377)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("10_4wxoo")
+texture_pressed = ExtResource("11_4mkev")
+passby_press = true
+action = "tiro"
+
+[node name="Ataque" type="TouchScreenButton" parent="Control"]
+position = Vector2(1268, 503)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("12_3eg7t")
+texture_pressed = ExtResource("13_yty4d")
+action = "ataque"
+
+[node name="Cura" type="TouchScreenButton" parent="Control"]
+position = Vector2(137, -22)
+scale = Vector2(15, 10)
+shape = SubResource("RectangleShape2D_cm73x")
+action = "cura"
+
+[node name="Dash" type="TouchScreenButton" parent="Control"]
+position = Vector2(1294, 403)
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("14_adyiw")
+texture_pressed = ExtResource("15_5dhqr")
+action = "dash"
+
+[node name="HealthText" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = -58.6
+offset_right = 338.0
+offset_bottom = 21.4
+theme_override_colors/font_shadow_color = Color(0.498039, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarraDeVida" type="Sprite2D" parent="Control"]
+z_index = -1
+position = Vector2(159, 8.4)
+scale = Vector2(0.4, 0.382)
+texture = ExtResource("14_krhtq")
+
+[node name="HealCountText" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 27.0
+offset_right = 138.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/Descer" to="." method="_on_descer_pressed"]
+[connection signal="released" from="Control/Descer" to="." method="_on_descer_released"]
+[connection signal="pressed" from="Control/Esquerda" to="." method="_on_esquerda_pressed"]
+[connection signal="released" from="Control/Esquerda" to="." method="_on_esquerda_released"]
+[connection signal="pressed" from="Control/Direita" to="." method="_on_direita_pressed"]
+[connection signal="released" from="Control/Direita" to="." method="_on_direita_released"]
+[connection signal="pressed" from="Control/Pulo" to="." method="_on_pulo_pressed"]
+[connection signal="released" from="Control/Pulo" to="." method="_on_pulo_released"]
+[connection signal="pressed" from="Control/Tiro" to="." method="_on_tiro_pressed"]
+[connection signal="released" from="Control/Tiro" to="." method="_on_tiro_released"]
+[connection signal="pressed" from="Control/Ataque" to="." method="_on_ataque_pressed"]
+[connection signal="released" from="Control/Ataque" to="." method="_on_ataque_released"]
+[connection signal="pressed" from="Control/Cura" to="." method="_on_cura_pressed"]
+[connection signal="pressed" from="Control/Dash" to="." method="_on_dash_pressed"]

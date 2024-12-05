@@ -1,0 +1,14 @@
+join iris (irisfalando) rightmost
+iris (irisfalando): Aparenta ser uma antiga casa, mas nada restou… Apenas escombros..
+update iris (irisouvindo)
+join Lucia (falando) leftmost
+Lucia (falando): Infelizmente. 
+update Lucia (ouvindo)
+iris (irisfalando): Você sabe como era morar neste planeta antes de toda essa destruição?
+update iris (irisouvindo)
+Lucia (falando): Pelo que eu li, nós não sabíamos a joia que possuíamos aqui. Havia tudo que precisávamos\: Comida, ar fresco, água, seres vivos, plantas, terra
+Lucia: e o suficiente para envolver o ser humano com mistérios e suas ideias criativas. É realmente uma pena o que aconteceu aqui.
+Lucia: …
+update Lucia (ouvindo)
+iris (irisfalando): …
+update iris (irisouvindo)

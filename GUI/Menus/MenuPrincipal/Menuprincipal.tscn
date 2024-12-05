@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://do8eu7anxsexk"]
+
+[ext_resource type="Script" path="res://GUI/Menus/MenuPrincipal/botãoplay.gd" id="2_kvl8a"]
+[ext_resource type="Texture2D" uid="uid://cadpec6iw5l83" path="res://GUI/Menus/MenuPrincipal/transparentLight14.png" id="2_v6tkc"]
+[ext_resource type="Texture2D" uid="uid://dnjv1kdy6ylup" path="res://GUI/Menus/MenuPrincipal/IMG-20241114-WA0053.jpg" id="3_321w1"]
+[ext_resource type="AudioStream" uid="uid://p36nnttfqxwg" path="res://GUI/Menus/MenuPrincipal/musicamenu.mp3" id="4_b28vp"]
+
+[node name="Menuprincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("2_kvl8a")
+metadata/_edit_use_anchors_ = true
+
+[node name="BotãoPlay" type="TouchScreenButton" parent="."]
+position = Vector2(6, -5)
+scale = Vector2(33.1667, 15.25)
+texture_normal = ExtResource("2_v6tkc")
+
+[node name="ImgMenuPrincipal" type="Sprite2D" parent="."]
+position = Vector2(799, 360)
+scale = Vector2(1, 0.802222)
+texture = ExtResource("3_321w1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_b28vp")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="BotãoPlay" to="." method="_on_botão_play_pressed"]

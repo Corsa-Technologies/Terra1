@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\DirectX\UserGpuPreferences]
+"C:\\Program Files\\Parsec\\parsecd.exe"="GpuPreference=1;"
+
+[HKEY_USERS\S-1-5-18\Software\Microsoft\DirectX\UserGpuPreferences]
+"C:\\Program Files\\Parsec\\parsecd.exe"="GpuPreference=1;"

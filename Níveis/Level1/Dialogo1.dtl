@@ -1,0 +1,12 @@
+join Lucia (ouvindo) leftmost
+join iris (irisouvindo) rightmost
+iris (irisfalando):  Prazer em te conhecer, Lúcia! Meu nome é IRIS, ou Inteligência Robótica Investigativa Sensibilizada. Vou ser sua companheiro nessa missão!
+iris (irisfalando): Após as guerras por recursos, o derretimento das geleiras, e o desmatamento desenfreado, restaram poucos seres vivos nesse planeta. Ainda detecto alguns sinais de vida na água e nas antigas cidades, mas nada como era antes. 
+update iris (irisouvindo)
+Lucia (falando): 40 anos não foram o suficiente para o planeta se recuperar das atividades humanas…
+update Lucia (ouvindo)
+iris (irisfalando): É sua primeira vez aqui?
+update iris (irisouvindo)
+Lucia (falando): Sim, e pelo que parece eu vou ter a honra de ser o último ser humano a pisar nessa terra.
+update Lucia (ouvindo)
+iris (irisfalando): A sementeira está numa pequena base próxima daqui. Vamos investigar.

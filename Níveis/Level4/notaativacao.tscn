@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://0332ci0nktao"]
+
+[ext_resource type="Script" path="res://Níveis/Level1/notaativacao.gd" id="1_8u2qh"]
+[ext_resource type="Texture2D" uid="uid://0cfrsf480cxq" path="res://Assets/newspaper.png" id="2_r8uv8"]
+[ext_resource type="Texture2D" uid="uid://d3m5lcfk68rid" path="res://addons/dialogic/Modules/Text/icon.svg" id="3_kj0r0"]
+[ext_resource type="PackedScene" uid="uid://csrm237quqi0i" path="res://Níveis/Level1/nota_1_canvas.tscn" id="4_flfaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7i8jb"]
+size = Vector2(261, 49)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_av0rk"]
+
+[node name="Note" type="Area2D"]
+script = ExtResource("1_8u2qh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -1)
+shape = SubResource("RectangleShape2D_7i8jb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, -1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_r8uv8")
+
+[node name="abrir" type="TouchScreenButton" parent="."]
+position = Vector2(-15, -54)
+texture_normal = ExtResource("3_kj0r0")
+
+[node name="Nota1_canvas" parent="." instance=ExtResource("4_flfaa")]
+follow_viewport_enabled = false
+
+[node name="fechar" type="TouchScreenButton" parent="Nota1_canvas"]
+position = Vector2(1297, 44)
+scale = Vector2(53, 54)
+texture_normal = SubResource("CanvasTexture_av0rk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="pressed" from="abrir" to="." method="_on_abrir_pressed"]
+[connection signal="pressed" from="Nota1_canvas/fechar" to="." method="_on_fechar_pressed"]

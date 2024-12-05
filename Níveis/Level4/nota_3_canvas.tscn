@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bspts3ig2ng2s"]
+
+[ext_resource type="Texture2D" uid="uid://cum3e7i1ql00e" path="res://Níveis/Level4/nota3.jpeg" id="1_xtjef"]
+
+[node name="nota3canvas" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -531.0
+offset_top = -329.0
+offset_right = 564.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("1_xtjef")
+expand_mode = 1

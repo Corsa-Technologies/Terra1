@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bldnnqfvpvpdi"
+path="res://.godot/imported/Musicacaverna.mp3-f963333b6413326dc18d575cd9c4e828.mp3str"
+
+[deps]
+
+source_file="res://Níveis/Level 3/Musicacaverna.mp3"
+dest_files=["res://.godot/imported/Musicacaverna.mp3-f963333b6413326dc18d575cd9c4e828.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

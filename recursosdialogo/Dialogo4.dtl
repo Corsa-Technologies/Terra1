@@ -1,0 +1,10 @@
+join Lucia leftmost
+join iris (irisouvindo) rightmost
+Lucia (falando): Bom, não posso dizer que esperava ter que entrar em uma caverna.
+update Lucia (ouvindo)
+iris (irisfalando): Quando as raízes das plantas morreram, a estrutura do terreno se enfraqueceu, então com o tempo o caminho tradicional foi destruído...
+iris (irisfalando): Devemos sair daqui o mais rápido possível, o terreno frágil pode desabar a qualquer momento.
+update iris (irisouvindo)
+Lucia (falando): Pelo menos aqui é mais fresco...
+update Lucia (ouvindo)
+iris (irisfalando): Não comemore tão cedo, meus sensores detectaram sinais de vida diferentes do que já vimos até agora, provavelmente atraídas pelo frescor.

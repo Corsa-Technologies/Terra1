@@ -1,0 +1,8 @@
+join Lucia (falando) leftmost
+Lucia: E pensar que isso foi tudo que sobrou da floresta Amazônica…
+update Lucia (ouvindo)
+join iris rightmost
+iris (irisfalando): Missão concluída, Agente.\
+Devemos reportar a colônia imediatamente!
+update iris (irisouvindo)
+Lucia (falando): É realmente uma pena...

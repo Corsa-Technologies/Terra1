@@ -1,0 +1,9 @@
+join iris (irisfalando) rightmost
+iris: ANALISANDO SER VIVO . . .
+join Lucia (ouvindo) leftmost
+iris (irisfalando): Este ser parece ser familiar. Aparenta descender de um lobo, mas devido a radiação e a poluição, seu organismo evoluiu para sobreviver a períodos maiores sem alimento ou nutrientes.
+iris (irisfalando): Entretanto, é muito mais agressivo. Sua raça está em processo de extinção, ele provavelmente está sofrendo por causa das mutações.
+update iris (irisouvindo)
+Lucia (falando): Como os seres que habitam aqui chegaram a este ponto?
+update Lucia (ouvindo)
+iris (irisfalando): Infelizmente, essas formas de vida tiveram de se adaptar ao ambiente pouco favorável que vivem..

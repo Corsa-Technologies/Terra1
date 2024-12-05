@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://csrm237quqi0i"]
+
+[ext_resource type="Texture2D" uid="uid://c7lvsmg5ovp4k" path="res://Níveis/Level1/Nota1.jpeg" id="1_ca3y8"]
+
+[node name="Nota1_canvas" type="CanvasLayer"]
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -531.0
+offset_top = -329.0
+offset_right = 564.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("1_ca3y8")
+expand_mode = 1

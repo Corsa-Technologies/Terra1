@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://ixhsleocjpvi"]
+
+[ext_resource type="Script" path="res://Player/Scripts/projetilaya.gd" id="1_8434y"]
+[ext_resource type="Texture2D" uid="uid://3ki6fsjdsxce" path="res://Assets/inimigos/inimigo1/ataque/All_Fire_Bullet_Pixel_16x16_04.png" id="1_f5n2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uc1rd"]
+size = Vector2(20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47wgl"]
+atlas = ExtResource("1_f5n2n")
+region = Rect2(96, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggyvj"]
+atlas = ExtResource("1_f5n2n")
+region = Rect2(112, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfexi"]
+atlas = ExtResource("1_f5n2n")
+region = Rect2(128, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s68rd"]
+atlas = ExtResource("1_f5n2n")
+region = Rect2(144, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h3fmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47wgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggyvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfexi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s68rd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a543s"]
+size = Vector2(24, 16)
+
+[node name="Projetilaya" type="CharacterBody2D"]
+light_mask = 0
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_8434y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_uc1rd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h3fmd")
+frame = 3
+frame_progress = 0.327299
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_a543s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
